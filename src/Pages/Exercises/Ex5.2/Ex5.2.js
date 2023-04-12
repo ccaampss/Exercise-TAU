@@ -1,10 +1,23 @@
-import ButtonGo from "../../../components/Buttons/Link/Link";
-import { TbBalloon } from "react-icons/tb";
+import React, { useRef } from "react";
 
-const Ex5_2Page = () => {
+function App() {
+  const paragraphRef = useRef(null);
+
+  function modifyNode() {
+    // Get the reference to the paragraph node
+    const myParagraph = paragraphRef.current;
+
+    // Modify the text and color of the paragraph
+    myParagraph.textContent = "Goodbye, world!";
+    myParagraph.style.color = "#85C7F2";
+  }
+
   return (
-    <ButtonGo text=":)" to="/" icon={<TbBalloon />} />
+    <div>
+      <p ref={paragraphRef}>Hello, world!</p>
+      <button className='Modify' onClick={modifyNode}>Modify it!</button>
+    </div>
   );
-};
+}
 
-export default Ex5_2Page;
+export default App;

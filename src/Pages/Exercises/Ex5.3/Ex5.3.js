@@ -3,7 +3,7 @@ import { TbBalloon } from "react-icons/tb";
 
 const Ex5_3Page = () => {
   return (
-    <ButtonGo text=":)" to="/" icon={<TbBalloon />} />
+    <ButtonGo to="/" icon={<TbBalloon/>} />
   );
 };
 
