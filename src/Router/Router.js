@@ -6,6 +6,8 @@ import App from "../Pages/Home/App";
 import Ex2_3Page from "../Pages/Exercises/Ex2.3/Ex2.3";
 import Ex3_3Page from "../Pages/Exercises/Ex3.3/Ex3.3";
 import Ex4_3Page from "../Pages/Exercises/Ex4.3/Ex4.3";
+import Ex5_2Page from "../Pages/Exercises/Ex5.2/Ex5.2";
+import Ex5_3Page from "../Pages/Exercises/Ex5.3/Ex5.3";
 import Layout from "../components/Layout/LayoutExercises";
 
 export const router = createBrowserRouter([
@@ -70,6 +72,27 @@ export const router = createBrowserRouter([
         <Ex4_3Page />
       </Layout>
     ),
-  }
-  
+  },
+  {
+    path: "ex5.2",
+    element: (
+      <Layout
+        title="Welcome to exercise 5.2"
+        subtitle="Create an app where you get a ref to a DOM node. Modify it (this one) time using the reference, e.g., to change the text or colour."
+      >
+        <Ex5_2Page />
+      </Layout>
+    ),
+  },
+    {
+      path: "ex5.3",
+      element: (
+        <Layout
+          title="Welcome to exercise 5.3"
+          subtitle="Create React app using MUI components that has 2 main elements.Shown some image. Put an Ui element where you can select other images to be shown instead of default one. But dont use just buttons etc. just to cycle between images, like carousel in previous week exercise. Other image options shouldnt be visible all the time. You can select how to implement this, but good options to try out might be menu, drawer etc. Look around in MUI navigation elements."
+        >
+          <Ex5_3Page />
+        </Layout>
+      )
+    },
 ]);

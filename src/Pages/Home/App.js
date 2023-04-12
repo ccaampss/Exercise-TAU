@@ -1,4 +1,4 @@
-import { TbNumber1, TbNumber2, TbNumber3, TbNumber4, TbNumber5 } from "react-icons/tb";
+import { TbNumber1, TbNumber2, TbNumber3, TbNumber4, TbNumber5, TbNumber6, TbNumber7} from "react-icons/tb";
 import ButtonGo from "../../components/Buttons/Link/Link";
 import NavBar from "../../components/Layout/NavBar/NavBar";
 import { H1 } from "../../components/Texts/H1/H1";
@@ -37,7 +37,18 @@ function App() {
             to="/ex4.3"
             icon={<TbNumber5 />}
           />
+           <ButtonGo
+            text="Go to exercise 5.2"
+            to="/ex5.2"
+            icon={<TbNumber6 />}
+          />
+            <ButtonGo
+            text="Go to exercise 5.3"
+            to="/ex5.3"
+            icon={<TbNumber7 />}
+          />
         </div>
+
       </AppStyled>
     </>
   );
