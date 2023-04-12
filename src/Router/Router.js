@@ -78,7 +78,7 @@ export const router = createBrowserRouter([
     element: (
       <Layout
         title="Welcome to exercise 5.2"
-        subtitle="Create an app where you get a ref to a DOM node. Modify it (this one) time using the reference, e.g., to change the text or colour."
+        subtitle="Create an app where you get a ref to a DOM node. Modify it using the reference to change the text or colour."
       >
         <Ex5_2Page />
       </Layout>
