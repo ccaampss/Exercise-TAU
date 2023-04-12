@@ -5,10 +5,7 @@ function App() {
   const paragraphRef = useRef(null);
 
   function modifyNode() {
-    // Get the reference to the paragraph node
     const myParagraph = paragraphRef.current;
-
-    // Modify the text and color of the paragraph
     myParagraph.textContent = "ooh, see you :(";
     myParagraph.style.color = "red";
   }
