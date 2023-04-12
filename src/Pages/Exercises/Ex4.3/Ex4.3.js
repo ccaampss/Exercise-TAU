@@ -1,10 +1,29 @@
-import ButtonGo from "../../../components/Buttons/Link/Link";
-import { TbBalloon } from "react-icons/tb";
+import React, { useState } from "react";
 
-const Ex4_3Page = () => {
+const images = [
+  "https://picsum.photos/500/300?random=1",
+  "https://picsum.photos/500/300?random=2",
+  "https://picsum.photos/500/300?random=3",
+  "https://picsum.photos/500/300?random=4",
+  "https://picsum.photos/500/300?random=5"
+];
+
+const ImageCarousel = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleKeyDown = e => {
+    if (e.keyCode === 37) { // left arrow
+      setCurrentImageIndex((currentImageIndex - 1 + images.length) % images.length);
+    } else if (e.keyCode === 39) { // right arrow
+      setCurrentImageIndex((currentImageIndex + 1) % images.length);
+    }
+  };
+
   return (
-    <ButtonGo to="/" icon={<TbBalloon/>} />
+    <div tabIndex="0" onKeyDown={handleKeyDown}>
+      <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
+    </div>
   );
 };
 
-export default Ex4_3Page;
+export default ImageCarousel;
